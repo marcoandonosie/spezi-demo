@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E49915D12E41F9900047AE20 /* SpeziChat in Frameworks */ = {isa = PBXBuildFile; productRef = E49915D02E41F9900047AE20 /* SpeziChat */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E49915762E41F5400047AE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49915602E41F53E0047AE20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49915672E41F53E0047AE20;
+			remoteInfo = "Test Spezi App Chat";
+		};
+		E49915802E41F5400047AE20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49915602E41F53E0047AE20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E49915672E41F53E0047AE20;
+			remoteInfo = "Test Spezi App Chat";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E49915682E41F53E0047AE20 /* Test Spezi App Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Spezi App Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49915752E41F5400047AE20 /* Test Spezi App ChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test Spezi App ChatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E499157F2E41F5400047AE20 /* Test Spezi App ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test Spezi App ChatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E49915782E41F5400047AE20 /* Test Spezi App ChatTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Test Spezi App ChatTests";
+			sourceTree = "<group>";
+		};
+		E49915822E41F5400047AE20 /* Test Spezi App ChatUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Test Spezi App ChatUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E49915652E41F53E0047AE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E49915D12E41F9900047AE20 /* SpeziChat in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49915722E41F5400047AE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E499157C2E41F5400047AE20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E499155F2E41F53E0047AE20 = {
+			isa = PBXGroup;
+			children = (
+				E49915782E41F5400047AE20 /* Test Spezi App ChatTests */,
+				E49915822E41F5400047AE20 /* Test Spezi App ChatUITests */,
+				E49915CF2E41F9900047AE20 /* Frameworks */,
+				E49915692E41F53E0047AE20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E49915692E41F53E0047AE20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E49915682E41F53E0047AE20 /* Test Spezi App Chat.app */,
+				E49915752E41F5400047AE20 /* Test Spezi App ChatTests.xctest */,
+				E499157F2E41F5400047AE20 /* Test Spezi App ChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E49915CF2E41F9900047AE20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E49915672E41F53E0047AE20 /* Test Spezi App Chat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E49915892E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App Chat" */;
+			buildPhases = (
+				E49915642E41F53E0047AE20 /* Sources */,
+				E49915652E41F53E0047AE20 /* Frameworks */,
+				E49915662E41F53E0047AE20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Test Spezi App Chat";
+			packageProductDependencies = (
+				E49915D02E41F9900047AE20 /* SpeziChat */,
+			);
+			productName = "Test Spezi App Chat";
+			productReference = E49915682E41F53E0047AE20 /* Test Spezi App Chat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E49915742E41F5400047AE20 /* Test Spezi App ChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E499158C2E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App ChatTests" */;
+			buildPhases = (
+				E49915712E41F5400047AE20 /* Sources */,
+				E49915722E41F5400047AE20 /* Frameworks */,
+				E49915732E41F5400047AE20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49915772E41F5400047AE20 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E49915782E41F5400047AE20 /* Test Spezi App ChatTests */,
+			);
+			name = "Test Spezi App ChatTests";
+			packageProductDependencies = (
+			);
+			productName = "Test Spezi App ChatTests";
+			productReference = E49915752E41F5400047AE20 /* Test Spezi App ChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E499157E2E41F5400047AE20 /* Test Spezi App ChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E499158F2E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App ChatUITests" */;
+			buildPhases = (
+				E499157B2E41F5400047AE20 /* Sources */,
+				E499157C2E41F5400047AE20 /* Frameworks */,
+				E499157D2E41F5400047AE20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E49915812E41F5400047AE20 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E49915822E41F5400047AE20 /* Test Spezi App ChatUITests */,
+			);
+			name = "Test Spezi App ChatUITests";
+			packageProductDependencies = (
+			);
+			productName = "Test Spezi App ChatUITests";
+			productReference = E499157F2E41F5400047AE20 /* Test Spezi App ChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E49915602E41F53E0047AE20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					E49915672E41F53E0047AE20 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					E49915742E41F5400047AE20 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = E49915672E41F53E0047AE20;
+					};
+					E499157E2E41F5400047AE20 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = E49915672E41F53E0047AE20;
+					};
+				};
+			};
+			buildConfigurationList = E49915632E41F53E0047AE20 /* Build configuration list for PBXProject "Test Spezi App Chat" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E499155F2E41F53E0047AE20;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E49915CE2E41F9240047AE20 /* XCLocalSwiftPackageReference "../SpeziChat" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E49915692E41F53E0047AE20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E49915672E41F53E0047AE20 /* Test Spezi App Chat */,
+				E49915742E41F5400047AE20 /* Test Spezi App ChatTests */,
+				E499157E2E41F5400047AE20 /* Test Spezi App ChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E49915662E41F53E0047AE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49915732E41F5400047AE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E499157D2E41F5400047AE20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E49915642E41F53E0047AE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E49915712E41F5400047AE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E499157B2E41F5400047AE20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E49915772E41F5400047AE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49915672E41F53E0047AE20 /* Test Spezi App Chat */;
+			targetProxy = E49915762E41F5400047AE20 /* PBXContainerItemProxy */;
+		};
+		E49915812E41F5400047AE20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E49915672E41F53E0047AE20 /* Test Spezi App Chat */;
+			targetProxy = E49915802E41F5400047AE20 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E49915872E41F5400047AE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E49915882E41F5400047AE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E499158A2E41F5400047AE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-Chat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E499158B2E41F5400047AE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-Chat";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E499158D2E41F5400047AE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-ChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Spezi App Chat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Test Spezi App Chat";
+			};
+			name = Debug;
+		};
+		E499158E2E41F5400047AE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-ChatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test Spezi App Chat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Test Spezi App Chat";
+			};
+			name = Release;
+		};
+		E49915902E41F5400047AE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-ChatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Test Spezi App Chat";
+			};
+			name = Debug;
+		};
+		E49915912E41F5400047AE20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-ChatUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Test Spezi App Chat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E49915632E41F53E0047AE20 /* Build configuration list for PBXProject "Test Spezi App Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49915872E41F5400047AE20 /* Debug */,
+				E49915882E41F5400047AE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E49915892E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E499158A2E41F5400047AE20 /* Debug */,
+				E499158B2E41F5400047AE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E499158C2E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App ChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E499158D2E41F5400047AE20 /* Debug */,
+				E499158E2E41F5400047AE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E499158F2E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App ChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49915902E41F5400047AE20 /* Debug */,
+				E49915912E41F5400047AE20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		E49915CE2E41F9240047AE20 /* XCLocalSwiftPackageReference "../SpeziChat" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SpeziChat;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E49915D02E41F9900047AE20 /* SpeziChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpeziChat;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E49915602E41F53E0047AE20 /* Project object */;
+}
