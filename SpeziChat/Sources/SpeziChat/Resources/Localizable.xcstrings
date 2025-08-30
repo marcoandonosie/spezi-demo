@@ -21,6 +21,21 @@
         }
       }
     },
+    "Copy" : {
+
+    },
+    "Done" : {
+
+    },
+    "Edit" : {
+
+    },
+    "Editing" : {
+
+    },
+    "Enter edit mode" : {
+
+    },
     "EQUAL_SIGN" : {
       "localizations" : {
         "de" : {
@@ -42,6 +57,12 @@
           }
         }
       }
+    },
+    "Exit edit mode" : {
+
+    },
+    "Exit selection mode" : {
+
     },
     "EXPORT_CHAT_BUTTON" : {
       "localizations" : {
@@ -152,6 +173,9 @@
           }
         }
       }
+    },
+    "Select" : {
+
     },
     "SEND_MESSAGE" : {
       "localizations" : {

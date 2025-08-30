@@ -6,26 +6,25 @@
 //
 
 import Spezi
-import HealthKit
-import HealthKitDataSource
-import Questionnaires
 import SwiftUI
+import SpeziLLM
+import SpeziLLMLocal
+import SpeziLLMOpenAI
+import SpeziChat
+import SpeziKeychainStorage
 
-
-
-
-class ExampleAppDelegate: SpeziAppDelegate {
+class MyAppDelegate: SpeziAppDelegate {
     override var configuration: Configuration {
-        Configuration(standard: ExampleStandard()) {
-            if HKHealthStore.isHealthDataAvailable() {
-                HealthKit {
-                    CollectSample(
-                        HKQuantityType(.stepCount),
-                        deliverySetting: .background(.afterAuthorizationAndApplicationWillLaunch)
+        Configuration {
+            //KeychainStorage()
+            /*LLMRunner {
+                LLMOpenAIPlatform(
+                    configuration: .init(
                     )
-                }
-            }
-            QuestionnaireDataSource()
+                )
+            } */
         }
     }
 }
+
+

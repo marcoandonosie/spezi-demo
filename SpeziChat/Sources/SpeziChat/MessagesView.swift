@@ -47,6 +47,9 @@ public struct MessagesView: View {
     
     @Binding private var chat: Chat
     @Binding private var bottomPadding: CGFloat
+    @Binding private var selectingMessageIndex: Int?
+    @Binding private var editingMessageIndex: Int?
+    
     private let hideMessages: MessageView.HiddenMessages
     private let typingIndicator: TypingIndicatorDisplayMode?
     
@@ -89,9 +92,26 @@ public struct MessagesView: View {
         ScrollViewReader { scrollViewProxy in
             ScrollView {
                 VStack {
-                    ForEach(Array(chat.enumerated()), id: \.offset) { _, message in
-                        MessageView(message, hideMessages: hideMessages)
+                    ForEach(Array(chat.enumerated()), id: \.offset) { index, message in
+                        // per-bubble Bool binding derived from selectingMessageIndex
+                        let selectionBinding = Binding<Bool>(
+                            get: { selectingMessageIndex == index },
+                            set: { on in selectingMessageIndex = on ? index : nil
+                            }
+                        )
+                        //targeted edit binding for this bubble
+                        let editBinding = Binding<Bool>(
+                            get: { editingMessageIndex == index },
+                            set: { on in editingMessageIndex = on ? index : nil }
+                        )
+                        MessageView(
+                            message,
+                            hideMessages: hideMessages,
+                            selectionMode: selectionBinding,
+                            editMode: editBinding
+                        )
                     }
+                    
                     if shouldDisplayTypingIndicator {
                         TypingIndicator()
                     }
@@ -125,12 +145,16 @@ public struct MessagesView: View {
         _ chat: Chat,
         hideMessages: MessageView.HiddenMessages = .all,
         typingIndicator: TypingIndicatorDisplayMode? = nil,
-        bottomPadding: CGFloat = 0
+        bottomPadding: CGFloat = 0,
+        selectingMessageIndex: Int? = nil,
+        editingMessageIndex: Int? = nil
     ) {
         self._chat = .constant(chat)
         self.hideMessages = hideMessages
         self.typingIndicator = typingIndicator
         self._bottomPadding = .constant(bottomPadding)
+        self._selectingMessageIndex = .constant(selectingMessageIndex)
+        self._editingMessageIndex = .constant(editingMessageIndex)
     }
 
     /// - Parameters:
@@ -142,12 +166,16 @@ public struct MessagesView: View {
         _ chat: Binding<Chat>,
         hideMessages: MessageView.HiddenMessages = .all,
         typingIndicator: TypingIndicatorDisplayMode? = nil,
-        bottomPadding: Binding<CGFloat> = .constant(0)
+        bottomPadding: Binding<CGFloat> = .constant(0),
+        selectingMessageIndex: Binding<Int?> = .constant(nil),
+        editingMessageIndex: Binding<Int?> = .constant(nil)
     ) {
         self._chat = chat
         self.hideMessages = hideMessages
         self.typingIndicator = typingIndicator
         self._bottomPadding = bottomPadding
+        self._selectingMessageIndex = selectingMessageIndex
+        self._editingMessageIndex = editingMessageIndex
     }
 
     
@@ -176,7 +204,7 @@ public struct MessagesView: View {
             ChatEntity(role: .user, content: "User Message!"),
             ChatEntity(role: .hidden(type: .unknown), content: "Hidden Message (but still visible)!"),
             ChatEntity(role: .assistantToolCall, content: "Assistant Message!"),
-            ChatEntity(role: .assistantToolResponse, content: "Assistant Message!f jiodsjfiods \n fudshfdusi"),
+            ChatEntity(role: .assistantToolResponse, content: "Assistant Message!"),
             ChatEntity(role: .assistant, content: "Assistant Message!")
         ],
         hideMessages: .custom(hiddenMessageTypes: [])

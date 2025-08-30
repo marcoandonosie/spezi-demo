@@ -8,6 +8,16 @@
 
 import SwiftUI
 
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
+
+#if canImport(AVFoundation)
+import AVFoundation
+#endif
+
 
 /// A reusable SwiftUI `View` to display the contents of a ``ChatEntity`` within a typical chat message bubble. This bubble is properly aligned according to the associated ``ChatEntity/Role``.
 ///
@@ -42,6 +52,9 @@ public struct MessageView: View {
     private let chat: ChatEntity
     private let hideMessages: HiddenMessages
     
+    @Binding private var selectionMode: Bool
+    @Binding private var editMode: Bool
+    
     
     private var shouldDisplayMessage: Bool {
         switch chat.role {
@@ -64,6 +77,13 @@ public struct MessageView: View {
         }
     }
     
+    // exposes copyable text for “normal” messages and hides it for tool interactions
+        private var copyText: String? {
+            guard !isToolInteraction else { return nil }
+            let raw = chat.content            // ChatEntity is initialized with `content: String`
+            return raw.isEmpty ? nil : raw
+        }
+    
     public var body: some View {
         if shouldDisplayMessage {
             HStack {
@@ -74,8 +94,72 @@ public struct MessageView: View {
                     if isToolInteraction {
                         ToolInteractionView(entity: chat)
                     } else {
-                        Text(chat.attributedContent)
-                            .chatMessageStyle(alignment: chat.alignment)
+                        // build the bubble once
+                            let bubble = Text(chat.attributedContent)
+                                .chatMessageStyle(alignment: chat.alignment)
+
+                            // choose the concrete variant via ViewBuilder, not a ternary
+                        Group {
+                            if selectionMode {
+                                bubble
+                                    .textSelection(.enabled)
+                                    .background(           // publish bubble frame in a named space
+                                        GeometryReader { proxy in
+                                            Color.clear.preference(
+                                                key: SelectedBubbleFrameKey.self,
+                                                value: proxy.frame(in: .named("ChatSpace"))
+                                            )
+                                        }
+                                    )
+                                    .zIndex(2)
+                            }
+                            else if editMode {
+                                //TODO: edit this screen as desired
+                                bubble
+                                        .overlay(RoundedRectangle(cornerRadius: 12).stroke(style: StrokeStyle(lineWidth: 1, dash: [4])))
+                                        .accessibilityHint(Text("Editing"))
+                            }
+                            else {
+                                bubble
+                                    .textSelection(.disabled)
+                                //Attach a context menu to that Text so a long press shows Copy.
+                                    .contextMenu {
+                                        if let t = copyText {
+                                            Button(String(localized: "Copy")) {
+                                                #if canImport(UIKit)
+                                                UIPasteboard.general.string = t
+                                                #elseif canImport(AppKit)
+                                                NSPasteboard.general.clearContents()
+                                                NSPasteboard.general.setString(t, forType: .string)
+                                                #endif
+                                            }
+                                            //Select option goes here
+                                            Button(String(localized: "Select")) {
+                                                selectionMode = true
+                                            }
+                                            
+                                        }
+                                        if case .user = chat.role {
+                                            Button(String(localized: "Edit")) {
+                                                editMode = true
+                                            }
+                                            .accessibilityLabel(Text("Enter edit mode"))
+                                        }
+                                        
+                                    }
+                            }
+                        }
+                        //voiceover rotor action goes here
+                            .accessibilityAction(named: Text(String(localized: "Copy"))) {
+                                guard let t = copyText else { return }
+                                #if canImport(UIKit)
+                                UIPasteboard.general.string = t
+                                #elseif canImport(AppKit)
+                                NSPasteboard.general.clearContents()
+                                NSPasteboard.general.setString(t, forType: .string)
+                                #endif
+                            }
+                        
                     }
                 }
                 
@@ -90,12 +174,54 @@ public struct MessageView: View {
     /// - Parameters:
     ///   - chat: The chat message that should be displayed.
     ///   - hideMessages: Types of ``ChatEntity/Role-swift.enum/hidden(type:)`` messages that should be hidden from the user.
-    public init(_ chat: ChatEntity, hideMessages: HiddenMessages = .all) {
+    ///   - selectionMode: boolean determining if we are in 'select' mode, which we enter when a user presses 'select' buttton in a chat's context menu
+    public init(
+        _ chat: ChatEntity,
+        hideMessages: HiddenMessages = .all,
+        selectionMode: Binding<Bool> = .constant(false),
+        editMode: Binding<Bool> = .constant(false)
+    ) {
         self.chat = chat
         self.hideMessages = hideMessages
+        self._selectionMode = selectionMode
+        self._editMode = editMode
     }
 }
 
+//for select option in context menu
+struct SelectedBubbleFrameKey: PreferenceKey {
+    static let defaultValue: CGRect? = nil
+    static func reduce(value: inout CGRect?, nextValue: () -> CGRect?) {
+        value = nextValue() ?? value
+    }
+}
+
+
+//speech helper function for playback of text in long press
+#if canImport(AVFoundation)
+import AVFoundation
+
+@MainActor                 // <— key line: confine everything to the main actor
+final class Speech {
+    static let shared = Speech()
+    private let synth = AVSpeechSynthesizer()
+
+    func speak(_ text: String,
+               language: String? = nil,
+               rate: Float = AVSpeechUtteranceDefaultSpeechRate) {
+        if synth.isSpeaking { synth.stopSpeaking(at: .immediate) }
+        let u = AVSpeechUtterance(string: text)
+        if let lang = language, let voice = AVSpeechSynthesisVoice(language: lang) {
+            u.voice = voice
+        }
+        u.rate = rate
+        synth.speak(u)
+    }
+
+    func stop() { synth.stopSpeaking(at: .immediate) }
+    var isSpeaking: Bool { synth.isSpeaking }
+}
+#endif
 
 #if DEBUG
 #Preview {

@@ -93,11 +93,23 @@ public struct ChatView: View {
     @State private var messageInputHeight: CGFloat = 0
     @State private var showShareSheet = false
     
+    @State private var selectingMessageIndex: Int? = nil
+    @State private var editingMessageIndex: Int? = nil
+    // TODO: add draft text keyed by index/message id if needed
+    
+    //TODO: add edit button states
     
     public var body: some View {
         ZStack {
             VStack {
-                MessagesView($chat, hideMessages: hideMessages, typingIndicator: messagePendingAnimation, bottomPadding: $messageInputHeight)
+                MessagesView(
+                    $chat,
+                    hideMessages: hideMessages,
+                    typingIndicator: messagePendingAnimation,
+                    bottomPadding: $messageInputHeight,
+                    selectingMessageIndex: $selectingMessageIndex,
+                    editingMessageIndex: $editingMessageIndex
+                )
                     #if !os(macOS)
                     .gesture(
                         TapGesture().onEnded {
@@ -114,7 +126,7 @@ public struct ChatView: View {
             VStack {
                 Spacer()
                 MessageInputView($chat, messagePlaceholder: messagePlaceholder, speechToText: speechToText)
-                    .disabled(disableInput)
+                    .disabled(disableInput || selectingMessageIndex != nil || editingMessageIndex != nil)
                     .onPreferenceChange(MessageInputViewHeightKey.self) { newValue in
                         runOrScheduleOnMainActor {
                             self.messageInputHeight = newValue + 12
@@ -122,30 +134,47 @@ public struct ChatView: View {
                     }
             }
         }
-            .toolbar {
-                if exportEnabled {
-                    ToolbarItem(placement: .primaryAction) {
-                        Button(action: {
-                            showShareSheet = true
-                        }) {
-                            Image(systemName: "square.and.arrow.up")
-                                .accessibilityLabel(Text("EXPORT_CHAT_BUTTON", bundle: .module))
-                        }
+        .toolbar {
+            if exportEnabled {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        showShareSheet = true
+                    }) {
+                        Image(systemName: "square.and.arrow.up")
+                            .accessibilityLabel(Text("EXPORT_CHAT_BUTTON", bundle: .module))
                     }
                 }
             }
-            .sheet(isPresented: $showShareSheet) {
-                if let exportedChatData, let exportFormat {
-                    #if !os(macOS)
-                    ShareSheet(sharedItem: exportedChatData, sharedItemType: exportFormat)
-                        .presentationDetents([.medium])
-                    #endif
-                } else {
-                    ProgressView()
-                        .padding()
-                        .presentationDetents([.medium])
+            if selectingMessageIndex != nil {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        selectingMessageIndex = nil
+                    }
+                    // looks like the default iOS nav button (no extra styling needed)
+                    .accessibilityLabel("Exit selection mode")
                 }
             }
+            if editingMessageIndex != nil {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") { editingMessageIndex = nil }
+                        .accessibilityLabel("Exit edit mode")
+                    //TODO: wire this instead so when we press SEND we exit the mode; for now this is okay
+                    //aside from exiting the edit mode we do a whole bunch of stuff LOL
+                }
+            }
+        }
+    .sheet(isPresented: $showShareSheet) {
+        if let exportedChatData, let exportFormat {
+        #if !os(macOS)
+            ShareSheet(sharedItem: exportedChatData, sharedItemType: exportFormat)
+                .presentationDetents([.medium])
+        #endif
+        } else {
+            ProgressView()
+                .padding()
+                .presentationDetents([.medium])
+        }
+    }
             #if os(macOS)
             .onChange(of: showShareSheet) { _, isPresented in
                 if isPresented, let exportedChatData, let exportFormat {

@@ -7,10 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E44800602E468BF80018675D /* SpeziLLM in Frameworks */ = {isa = PBXBuildFile; productRef = E448005F2E468BF80018675D /* SpeziLLM */; };
+		E44800622E468BF80018675D /* SpeziLLMFog in Frameworks */ = {isa = PBXBuildFile; productRef = E44800612E468BF80018675D /* SpeziLLMFog */; };
+		E44800642E468BF80018675D /* SpeziLLMLocal in Frameworks */ = {isa = PBXBuildFile; productRef = E44800632E468BF80018675D /* SpeziLLMLocal */; };
+		E44800662E468BF80018675D /* SpeziLLMLocalDownload in Frameworks */ = {isa = PBXBuildFile; productRef = E44800652E468BF80018675D /* SpeziLLMLocalDownload */; };
+		E44800682E468BF80018675D /* SpeziLLMOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = E44800672E468BF80018675D /* SpeziLLMOpenAI */; };
+		E44800972E468EBD0018675D /* SpeziChat in Frameworks */ = {isa = PBXBuildFile; productRef = E44800962E468EBD0018675D /* SpeziChat */; };
+		E44800992E468EBD0018675D /* SpeziLLM in Frameworks */ = {isa = PBXBuildFile; productRef = E44800982E468EBD0018675D /* SpeziLLM */; };
+		E448009B2E468EBD0018675D /* SpeziLLMLocal in Frameworks */ = {isa = PBXBuildFile; productRef = E448009A2E468EBD0018675D /* SpeziLLMLocal */; };
+		E448009D2E468EBD0018675D /* SpeziLLMOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = E448009C2E468EBD0018675D /* SpeziLLMOpenAI */; };
 		E49915D12E41F9900047AE20 /* SpeziChat in Frameworks */ = {isa = PBXBuildFile; productRef = E49915D02E41F9900047AE20 /* SpeziChat */; };
+		E49915E92E440B430047AE20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49915E62E440B430047AE20 /* ContentView.swift */; };
+		E49915EA2E440B430047AE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49915E52E440B430047AE20 /* AppDelegate.swift */; };
+		E49915F52E4418E70047AE20 /* entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49915F42E4418E30047AE20 /* entry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E448007A2E468CEB0018675D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49915602E41F53E0047AE20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E448006C2E468CE90018675D;
+			remoteInfo = "TEST target";
+		};
+		E44800842E468CEB0018675D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E49915602E41F53E0047AE20 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E448006C2E468CE90018675D;
+			remoteInfo = "TEST target";
+		};
 		E49915762E41F5400047AE20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E49915602E41F53E0047AE20 /* Project object */;
@@ -28,30 +54,73 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E448005B2E4474550018675D /* Test Spezi App Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Test Spezi App Chat.entitlements"; sourceTree = "<group>"; };
+		E448006D2E468CE90018675D /* TEST target.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEST target.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44800792E468CEB0018675D /* TEST targetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TEST targetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44800832E468CEB0018675D /* TEST targetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TEST targetUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49915682E41F53E0047AE20 /* Test Spezi App Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test Spezi App Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49915752E41F5400047AE20 /* Test Spezi App ChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test Spezi App ChatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E499157F2E41F5400047AE20 /* Test Spezi App ChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test Spezi App ChatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49915E52E440B430047AE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E49915E62E440B430047AE20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E49915EB2E440B680047AE20 /* Test Spezi App Chat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test Spezi App Chat-Bridging-Header.h"; sourceTree = "<group>"; };
+		E49915F42E4418E30047AE20 /* entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E49915782E41F5400047AE20 /* Test Spezi App ChatTests */ = {
+		E448006E2E468CE90018675D /* TEST target */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Test Spezi App ChatTests";
+			path = "TEST target";
 			sourceTree = "<group>";
 		};
-		E49915822E41F5400047AE20 /* Test Spezi App ChatUITests */ = {
+		E448007C2E468CEB0018675D /* TEST targetTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Test Spezi App ChatUITests";
+			path = "TEST targetTests";
+			sourceTree = "<group>";
+		};
+		E44800862E468CEB0018675D /* TEST targetUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "TEST targetUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E448006A2E468CE90018675D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E448009B2E468EBD0018675D /* SpeziLLMLocal in Frameworks */,
+				E44800992E468EBD0018675D /* SpeziLLM in Frameworks */,
+				E448009D2E468EBD0018675D /* SpeziLLMOpenAI in Frameworks */,
+				E44800972E468EBD0018675D /* SpeziChat in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44800762E468CEB0018675D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44800802E468CEB0018675D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E49915652E41F53E0047AE20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E44800682E468BF80018675D /* SpeziLLMOpenAI in Frameworks */,
+				E44800642E468BF80018675D /* SpeziLLMLocal in Frameworks */,
+				E44800602E468BF80018675D /* SpeziLLM in Frameworks */,
+				E44800622E468BF80018675D /* SpeziLLMFog in Frameworks */,
 				E49915D12E41F9900047AE20 /* SpeziChat in Frameworks */,
+				E44800662E468BF80018675D /* SpeziLLMLocalDownload in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +144,16 @@
 		E499155F2E41F53E0047AE20 = {
 			isa = PBXGroup;
 			children = (
-				E49915782E41F5400047AE20 /* Test Spezi App ChatTests */,
-				E49915822E41F5400047AE20 /* Test Spezi App ChatUITests */,
+				E448005B2E4474550018675D /* Test Spezi App Chat.entitlements */,
+				E49915E52E440B430047AE20 /* AppDelegate.swift */,
+				E49915E62E440B430047AE20 /* ContentView.swift */,
+				E49915F42E4418E30047AE20 /* entry.swift */,
+				E448006E2E468CE90018675D /* TEST target */,
+				E448007C2E468CEB0018675D /* TEST targetTests */,
+				E44800862E468CEB0018675D /* TEST targetUITests */,
 				E49915CF2E41F9900047AE20 /* Frameworks */,
 				E49915692E41F53E0047AE20 /* Products */,
+				E49915EB2E440B680047AE20 /* Test Spezi App Chat-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +163,9 @@
 				E49915682E41F53E0047AE20 /* Test Spezi App Chat.app */,
 				E49915752E41F5400047AE20 /* Test Spezi App ChatTests.xctest */,
 				E499157F2E41F5400047AE20 /* Test Spezi App ChatUITests.xctest */,
+				E448006D2E468CE90018675D /* TEST target.app */,
+				E44800792E468CEB0018675D /* TEST targetTests.xctest */,
+				E44800832E468CEB0018675D /* TEST targetUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +180,78 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E448006C2E468CE90018675D /* TEST target */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E448008B2E468CEB0018675D /* Build configuration list for PBXNativeTarget "TEST target" */;
+			buildPhases = (
+				E44800692E468CE90018675D /* Sources */,
+				E448006A2E468CE90018675D /* Frameworks */,
+				E448006B2E468CE90018675D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E448006E2E468CE90018675D /* TEST target */,
+			);
+			name = "TEST target";
+			packageProductDependencies = (
+				E44800962E468EBD0018675D /* SpeziChat */,
+				E44800982E468EBD0018675D /* SpeziLLM */,
+				E448009A2E468EBD0018675D /* SpeziLLMLocal */,
+				E448009C2E468EBD0018675D /* SpeziLLMOpenAI */,
+			);
+			productName = "TEST target";
+			productReference = E448006D2E468CE90018675D /* TEST target.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E44800782E468CEB0018675D /* TEST targetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E448008E2E468CEB0018675D /* Build configuration list for PBXNativeTarget "TEST targetTests" */;
+			buildPhases = (
+				E44800752E468CEB0018675D /* Sources */,
+				E44800762E468CEB0018675D /* Frameworks */,
+				E44800772E468CEB0018675D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E448007B2E468CEB0018675D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E448007C2E468CEB0018675D /* TEST targetTests */,
+			);
+			name = "TEST targetTests";
+			packageProductDependencies = (
+			);
+			productName = "TEST targetTests";
+			productReference = E44800792E468CEB0018675D /* TEST targetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E44800822E468CEB0018675D /* TEST targetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E44800912E468CEB0018675D /* Build configuration list for PBXNativeTarget "TEST targetUITests" */;
+			buildPhases = (
+				E448007F2E468CEB0018675D /* Sources */,
+				E44800802E468CEB0018675D /* Frameworks */,
+				E44800812E468CEB0018675D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E44800852E468CEB0018675D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E44800862E468CEB0018675D /* TEST targetUITests */,
+			);
+			name = "TEST targetUITests";
+			packageProductDependencies = (
+			);
+			productName = "TEST targetUITests";
+			productReference = E44800832E468CEB0018675D /* TEST targetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E49915672E41F53E0047AE20 /* Test Spezi App Chat */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E49915892E41F5400047AE20 /* Build configuration list for PBXNativeTarget "Test Spezi App Chat" */;
@@ -117,6 +267,11 @@
 			name = "Test Spezi App Chat";
 			packageProductDependencies = (
 				E49915D02E41F9900047AE20 /* SpeziChat */,
+				E448005F2E468BF80018675D /* SpeziLLM */,
+				E44800612E468BF80018675D /* SpeziLLMFog */,
+				E44800632E468BF80018675D /* SpeziLLMLocal */,
+				E44800652E468BF80018675D /* SpeziLLMLocalDownload */,
+				E44800672E468BF80018675D /* SpeziLLMOpenAI */,
 			);
 			productName = "Test Spezi App Chat";
 			productReference = E49915682E41F53E0047AE20 /* Test Spezi App Chat.app */;
@@ -134,9 +289,6 @@
 			);
 			dependencies = (
 				E49915772E41F5400047AE20 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				E49915782E41F5400047AE20 /* Test Spezi App ChatTests */,
 			);
 			name = "Test Spezi App ChatTests";
 			packageProductDependencies = (
@@ -158,9 +310,6 @@
 			dependencies = (
 				E49915812E41F5400047AE20 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				E49915822E41F5400047AE20 /* Test Spezi App ChatUITests */,
-			);
 			name = "Test Spezi App ChatUITests";
 			packageProductDependencies = (
 			);
@@ -178,8 +327,20 @@
 				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
+					E448006C2E468CE90018675D = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					E44800782E468CEB0018675D = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = E448006C2E468CE90018675D;
+					};
+					E44800822E468CEB0018675D = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = E448006C2E468CE90018675D;
+					};
 					E49915672E41F53E0047AE20 = {
 						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
 					};
 					E49915742E41F5400047AE20 = {
 						CreatedOnToolsVersion = 16.3;
@@ -201,7 +362,8 @@
 			mainGroup = E499155F2E41F53E0047AE20;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				E49915CE2E41F9240047AE20 /* XCLocalSwiftPackageReference "../SpeziChat" */,
+				E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */,
+				E448009E2E4DE8990018675D /* XCLocalSwiftPackageReference "../SpeziChat" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E49915692E41F53E0047AE20 /* Products */;
@@ -211,11 +373,35 @@
 				E49915672E41F53E0047AE20 /* Test Spezi App Chat */,
 				E49915742E41F5400047AE20 /* Test Spezi App ChatTests */,
 				E499157E2E41F5400047AE20 /* Test Spezi App ChatUITests */,
+				E448006C2E468CE90018675D /* TEST target */,
+				E44800782E468CEB0018675D /* TEST targetTests */,
+				E44800822E468CEB0018675D /* TEST targetUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E448006B2E468CE90018675D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44800772E468CEB0018675D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44800812E468CEB0018675D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E49915662E41F53E0047AE20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,10 +426,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E44800692E468CE90018675D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E44800752E468CEB0018675D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E448007F2E468CEB0018675D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E49915642E41F53E0047AE20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49915F52E4418E70047AE20 /* entry.swift in Sources */,
+				E49915E92E440B430047AE20 /* ContentView.swift in Sources */,
+				E49915EA2E440B430047AE20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +474,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E448007B2E468CEB0018675D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E448006C2E468CE90018675D /* TEST target */;
+			targetProxy = E448007A2E468CEB0018675D /* PBXContainerItemProxy */;
+		};
+		E44800852E468CEB0018675D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E448006C2E468CE90018675D /* TEST target */;
+			targetProxy = E44800842E468CEB0018675D /* PBXContainerItemProxy */;
+		};
 		E49915772E41F5400047AE20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E49915672E41F53E0047AE20 /* Test Spezi App Chat */;
@@ -277,6 +497,128 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		E448008C2E468CEB0018675D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.TEST-target";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E448008D2E468CEB0018675D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.TEST-target";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E448008F2E468CEB0018675D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.TEST-targetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEST target.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TEST target";
+			};
+			name = Debug;
+		};
+		E44800902E468CEB0018675D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.TEST-targetTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEST target.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TEST target";
+			};
+			name = Release;
+		};
+		E44800922E468CEB0018675D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.TEST-targetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TEST target";
+			};
+			name = Debug;
+		};
+		E44800932E468CEB0018675D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.TEST-targetUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TEST target";
+			};
+			name = Release;
+		};
 		E49915872E41F5400047AE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -401,6 +743,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Test Spezi App Chat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
@@ -418,6 +762,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Test Spezi App Chat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -428,6 +774,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Test Spezi App Chat.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
@@ -445,6 +793,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.marcosie.Test-Spezi-App-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Test Spezi App Chat-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,6 +870,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E448008B2E468CEB0018675D /* Build configuration list for PBXNativeTarget "TEST target" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E448008C2E468CEB0018675D /* Debug */,
+				E448008D2E468CEB0018675D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E448008E2E468CEB0018675D /* Build configuration list for PBXNativeTarget "TEST targetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E448008F2E468CEB0018675D /* Debug */,
+				E44800902E468CEB0018675D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E44800912E468CEB0018675D /* Build configuration list for PBXNativeTarget "TEST targetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E44800922E468CEB0018675D /* Debug */,
+				E44800932E468CEB0018675D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E49915632E41F53E0047AE20 /* Build configuration list for PBXProject "Test Spezi App Chat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -560,13 +936,68 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		E49915CE2E41F9240047AE20 /* XCLocalSwiftPackageReference "../SpeziChat" */ = {
+		E448009E2E4DE8990018675D /* XCLocalSwiftPackageReference "../SpeziChat" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../SpeziChat;
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StanfordSpezi/SpeziLLM";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		E448005F2E468BF80018675D /* SpeziLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLM;
+		};
+		E44800612E468BF80018675D /* SpeziLLMFog */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLMFog;
+		};
+		E44800632E468BF80018675D /* SpeziLLMLocal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLMLocal;
+		};
+		E44800652E468BF80018675D /* SpeziLLMLocalDownload */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLMLocalDownload;
+		};
+		E44800672E468BF80018675D /* SpeziLLMOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLMOpenAI;
+		};
+		E44800962E468EBD0018675D /* SpeziChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpeziChat;
+		};
+		E44800982E468EBD0018675D /* SpeziLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLM;
+		};
+		E448009A2E468EBD0018675D /* SpeziLLMLocal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLMLocal;
+		};
+		E448009C2E468EBD0018675D /* SpeziLLMOpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E448005E2E468BF80018675D /* XCRemoteSwiftPackageReference "SpeziLLM" */;
+			productName = SpeziLLMOpenAI;
+		};
 		E49915D02E41F9900047AE20 /* SpeziChat */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpeziChat;
